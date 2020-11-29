@@ -25,11 +25,11 @@ const Table = () => {
     let filteredData = data;
 
     if (search) {
-      console.log(search);
+      //console.log(search);
       filteredData = filteredData.filter((comment) =>
         comment.Country.toLowerCase().includes(search.toLowerCase())
       );
-      console.log(filteredData.slice(0, 5));
+      //console.log(filteredData.slice(0, 5));
     }
     return Array.from(filteredData);
   }, [data, search]);
