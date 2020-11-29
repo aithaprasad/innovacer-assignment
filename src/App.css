@@ -6,6 +6,34 @@
   justify-content: center;
 }
 
+.FullApp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 50%;
+}
+
+.FullApp:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.Red {
+  color: red;
+  font-size: 40px;
+}
+
+.Green {
+  color: green;
+  font-size: 40px;
+}
+
+.Blue {
+  color: blue;
+  font-size: 40px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
