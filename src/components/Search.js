@@ -9,7 +9,7 @@ const Search = ({ onSearch }) => {
   return (
     <input
       type="text"
-      style={{ width: "240px" }}
+      style={{ width: "240px", height: "24px" }}
       placeholder="Search"
       value={search}
       onChange={(e) => onInputChange(e.target.value)}

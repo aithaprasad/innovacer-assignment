@@ -1,6 +1,7 @@
 //import React from "react";
 import React, { useState, useEffect, useMemo } from "react";
 import Search from "./Search.js";
+import "./Table.css";
 
 const Table = () => {
   const [data, setData] = useState({});
@@ -35,14 +36,15 @@ const Table = () => {
 
   return (
     <>
-      <div>
+      <div className="Tabletop">
         <Search
           onSearch={(value) => {
             setSearch(value);
           }}
         />
       </div>
-      <table id="myTable">
+      <style>{"table, th, td{border:1px solid black;}"}</style>
+      <table className="Tabletop">
         <thead>
           {filterData.length > 0 ? (
             <tr>
@@ -62,7 +64,7 @@ const Table = () => {
             filterData.map((droplet) => {
               return (
                 <tr key={droplet.CountryCode}>
-                  <td>{droplet.Country}</td>
+                  <td className="Country">{droplet.Country}</td>
                   <td>{droplet.TotalConfirmed}</td>
                   <td>{droplet.TotalRecovered}</td>
                   <td>{droplet.TotalDeaths}</td>
