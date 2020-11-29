@@ -44,12 +44,18 @@ const Table = () => {
       </div>
       <table id="myTable">
         <thead>
-          <tr>
-            <th>Name</th>
-            <th>Confirmed</th>
-            <th>Recovered</th>
-            <th>Deaths</th>
-          </tr>
+          {filterData.length > 0 ? (
+            <tr>
+              <th>Name</th>
+              <th>Confirmed</th>
+              <th>Recovered</th>
+              <th>Deaths</th>
+            </tr>
+          ) : (
+            <tr>
+              <td colSpan="5">No Matches Found...</td>
+            </tr>
+          )}
         </thead>
         <tbody>
           {filterData.length > 0 ? (
@@ -64,9 +70,7 @@ const Table = () => {
               );
             })
           ) : (
-            <tr>
-              <td colSpan="5">No Matches Found...</td>
-            </tr>
+            <tr></tr>
           )}
         </tbody>
       </table>
